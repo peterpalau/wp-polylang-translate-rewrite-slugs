@@ -90,7 +90,7 @@ class Polylang_Translate_Rewrite_Slugs {
 
 		// If the Polylang plugin is active...
 		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-		if (is_plugin_active('polylang/polylang.php')) {
+		if (defined('POLYLANG') || (defined('POLYLANG_BASENAME') && is_plugin_active(POLYLANG_BASENAME))) {
 			add_action('init', array($this, 'init_action'), 20);
 		}
 	}
@@ -178,7 +178,7 @@ class Polylang_Translate_Rewrite_Slugs {
 		global $polylang;
 
 		// We always check for the post language. Otherwise, the current language.
-		$post_language = $polylang->model->get_post_language($post->ID);
+		$post_language = PLL()->model->post->get_post_language($post->ID);
 		if ($post_language) {
 			$lang = $post_language->slug;
 		} else {
