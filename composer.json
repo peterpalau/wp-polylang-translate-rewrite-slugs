@@ -1,0 +1,17 @@
+{
+  "name": "peterpalau/wp-polylang-translate-rewrite-slugs",
+	"type": "wordpress-plugin",
+	"license": "MIT",
+	"description": "Wordpress plugin to help translate post types rewrite slugs with the Polylang plugin",
+	"homepage": "https://github.com/peterpalau/wp-polylang-translate-rewrite-slugs",
+	"authors": [
+		{
+			"name": "Kristoffer LR",
+			"homepage": "https://github.com/KLicheR"
+		}
+	],
+	"require": {
+		"composer/installers": "~1.0",
+		"php": ">=7.0"
+	}
+}
